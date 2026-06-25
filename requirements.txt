@@ -1,0 +1,8 @@
+# libraries
+fastapi
+uvicorn
+requests
+pydantic
+
+# how to install
+# pip install -r requirements.txt
