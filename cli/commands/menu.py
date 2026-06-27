@@ -11,7 +11,6 @@ options = [
     "Exit"
 ]
 
-
 def draw_menu(selected):
     print("LIBRARY SYSTEM")
     print("-"*30)
@@ -20,8 +19,6 @@ def draw_menu(selected):
             print("> "+item)
         else:
             print("  "+item)
-
-
 
 def run_menu():
     selected = 0
