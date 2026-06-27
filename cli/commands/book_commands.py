@@ -19,15 +19,15 @@ def create_book():
 def edit_book():
     book_id = input("Book ID: ")
     data = {}
-    title = input("New title (Enter skip): ")
+    title = input("New title (Enter to skip): ")
 
     if title:
         data["title"] = title
-    author = input("New author (Enter skip): ")
+    author = input("New author (Enter to skip): ")
 
     if author:
         data["author"] = author
-    available = input("Available true/false (Enter skip): ")
+    available = input("Available true/false (Enter to skip): ")
 
     if available:
         data["available"] = available.lower()=="true"

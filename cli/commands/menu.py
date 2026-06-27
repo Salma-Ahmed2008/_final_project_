@@ -1,6 +1,6 @@
 import os
 import msvcrt
-from commands.book_commands import *
+from commands import book_commands
 
 options = [
     "View Books",
@@ -14,49 +14,40 @@ options = [
 def draw_menu(selected):
     print("LIBRARY SYSTEM")
     print("-"*30)
-    for i,item in enumerate(options):
+    for i, item in enumerate(options):
         if i == selected:
-            print("> "+item)
+            print("> " + item)
         else:
-            print("  "+item)
+            print("  " + item)
 
-def run_menu():
+def menu():
     selected = 0
     while True:
         os.system("cls")
         draw_menu(selected)
         key = msvcrt.getch()
-
         if key == b'\xe0':
             key = msvcrt.getch()
-
             if key == b'H':
                 selected -= 1
-
             elif key == b'P':
                 selected += 1
 
         elif key == b'\r':
             os.system("cls")
-
             if selected == 0:
-                view_books()
-
+                book_commands.view_books()
             elif selected == 1:
-                view_book_by_id()
-
+                book_commands.view_book_by_id()
             elif selected == 2:
-                create_book()
-
+                book_commands.create_book()
             elif selected == 3:
-                edit_book()
-
+                book_commands.edit_book()
             elif selected == 4:
-                remove_book()
-
+                book_commands.remove_book()
             elif selected == 5:
                 exit()
-            input("\nPress Enter...")
+            input("\nPress Enter to continue")
 
         if selected < 0:
             selected = len(options)-1
