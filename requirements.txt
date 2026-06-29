@@ -4,6 +4,7 @@ uvicorn
 pydantic
 supabase
 python-dotenv
+requests
 
 # how to install
 # pip install -r requirements.txt
