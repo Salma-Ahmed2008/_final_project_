@@ -1,20 +1,20 @@
-def print_book(book):
-    print("\nBOOK DETAILS")
-    print("-"*40)
-    print(f"ID: {book['id']}")
-    print(f"Title: {book['title']}")
-    print(f"Author: {book['author']}")
-    print(f"Available: {book['available']}")
-    print("-"*40)
+def print_book(pad, book):
+    pad.addstr("\nBOOK DETAILS\n")
+    pad.addstr("-" * 40 + "\n")
+    pad.addstr(f"ID: {book['id']}\n")
+    pad.addstr(f"Title: {book['title']}\n")
+    pad.addstr(f"Author: {book['author']}\n")
+    pad.addstr(f"Available: {book['available']}\n")
+    pad.addstr("-" * 40 + "\n")
 
-def print_books(books):
-    print("\nBOOK LIST")
-    print("-"*40)
+
+
+def print_books(pad, books):
+    pad.addstr("\nBOOK LIST\n")
+    pad.addstr("-" * 40 + "\n")
     for book in books:
-        print(f"""
-ID: {book['id']}
-Title: {book['title']}
-Author: {book['author']}
-Available: {book['available']}
-""")
-    print("-"*40)
+        pad.addstr(f"ID: {book['id']}\n")
+        pad.addstr(f"Title: {book['title']}\n")
+        pad.addstr(f"Author: {book['author']}\n")
+        pad.addstr(f"Available: {book['available']}\n")
+        pad.addstr("-" * 40 + "\n")
