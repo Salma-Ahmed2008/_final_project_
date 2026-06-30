@@ -1,6 +1,6 @@
 import requests
 
-base_url = "http://127.0.0.1:8000"
+base_url = "https://finalproject-production-3ec5.up.railway.app"
 
 def get_all_books():
     response = requests.get(f"{base_url}/books")
